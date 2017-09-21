@@ -1,0 +1,27 @@
+{
+  "name": "twxauth",
+  "version": "1.0.0",
+  "description": "Easy Twitter XAuth simulator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2vg/twxauth.git"
+  },
+  "keywords": [
+    "twitter",
+    "XAuth"
+  ],
+  "author": "@2vg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2vg/twxauth/issues"
+  },
+  "homepage": "https://github.com/2vg/twxauth#readme",
+  "dependencies": {
+    "autwh": "0.0.1",
+    "cheerio-httpcli": "^0.7.1"
+  }
+}
