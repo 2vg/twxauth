@@ -25,16 +25,7 @@ exports.twxauth = async(consumerKey, consumerSecret, screen_name, password) => {
     })
     .then(async(res) => {
       const PIN = res.body.match(/<code>(.*?)<\/code>/);
-      
-      if (PIN !== null) {
-        if (PIN[1].match(/[0-9]{7}/)) {
-          return await twAuth.done(ctx, PIN[1]);
-        }else{
-          return false;
-        }
-      }else{
-        return false;
-      }
+      return PIN !== null ? PIN[1].match(/[0-9{7}]/) ? await twAuth.done(ctx, PIN[1]) : false : false;
     })
     .catch((err) => {
       return false;
