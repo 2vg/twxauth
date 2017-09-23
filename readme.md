@@ -19,15 +19,19 @@ const ck = "your consumerKey",
 
 (async() => {
   const token = await tx.twxauth(ck, cs, un, pw);
-  console.log(token);
-  /*
-  **
-  **  example result,
-  **
-  **{ accessToken: 'XXXX-XXXXXXXX',
-  **  accessTokenSecret: 'XXXXXXXXXX',
-  **  userId: 'XXXXXXXXXX',
-  **  screenName: 'XXXXXX' }
-  */
+  if(!token) {
+    console.log(token);
+    /*
+    **  { accessToken: 'XXXX-XXXXXXXX',
+    **    accessTokenSecret: 'XXXXXXXXXX',
+    **    userId: 'XXXXXXXXXX',
+    **    screenName: 'XXXXXX' }
+    */
+  }else{
+    console.log(token);
+    /*
+    **  false
+    */
+  }
 })();
 ```
